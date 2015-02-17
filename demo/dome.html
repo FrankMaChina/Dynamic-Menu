@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>36ke</title>
+	<link rel="stylesheet" type="text/css" href="../css/dome.css">
+	
+	<script type="text/javascript" src="../lib/jquery-2.1.3.js"></script>
+	<script type="text/javascript" src="../lib/jquery.js"></script>
+	
+	<script type="text/javascript" src="../lib/highlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushCSharp.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushDelphi.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushDiff.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushGroovy.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushPhp.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushPlain.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushPython.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushRuby.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushScala.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushSql.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushVb.js"></script>
+	<script type="text/javascript" src="../lib/highlighter/scripts/shBrushXml.js"></script>
+	<link type="text/css" rel="stylesheet" href="../lib/highlighter/styles/shCore.css"/>
+	<link type="text/css" rel="stylesheet" href="../lib/highlighter/styles/shThemeDefault.css"/>
+
+	<script type="text/javascript" src="../lib/jquery-2.1.3.js"></script>
+	<script type="text/javascript" src="../lib/36krjquery.js"></script>
+	
+	<script type="text/javascript" src="../lib/dome.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = '../lib/highlighter/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+		SyntaxHighlighter.config.strings = {
+			copyToClipboard:'复制'
+		};
+	</script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.header_sty{
+			width: 970px;
+			margin: 0 auto;
+			font-size: 12px;
+			
+		}
+		.logo_sty{
+			width: 70px;
+			height: 70px;
+			text-align: center;
+			font-size: 26px;
+
+			color: white;
+			background:red;
+			border-radius: 8px;
+			float: left;
+		}
+		.header_sty_ul{
+			list-style:none;
+			display: line-block;
+
+		}
+		.header_sty_li{
+			float: left;
+			width: 75px;
+			height: 30px;
+			text-align: center;
+			border-radius: 5px;
+			padding-top:5px; 
+			font-size: 14px;
+			margin-top: 34px;
+			border-color: #fa492b;
+			box-shadow: 0 2px 0 #ef2503;
+			
+			background-color: #fa492b;
+			margin-left:5px; 
+		}
+		.header_sty_li:hover{
+			transition:color 0.2s ease-in-out,background-color 0.2s ease-in-out,top 0.1s linear,box-shadow 0.1s linear;
+			background: #ef2503;
+		}
+		.header_sty_li a{
+			color: #fff;
+			text-decoration: none;
+			padding-top:6px;
+			display: block; 
+		}
+		.triangle{
+			margin-top: -7px;
+			display: block;
+			margin-right:1px; 
+			width: 0px;
+			float: right;
+			height: 0px;
+			border-left: 4px solid transparent;
+			border-right: 4px solid transparent;
+			border-top: 5px solid white;
+		}
+		.intrudoce{
+			clear: left;
+			width: 970px;
+			margin: 0 auto;
+			padding-top:20px; 
+		}
+	</style>
+	
+</head>
+<body>
+	<div id="header" class="header_sty">
+		<div id="logo" class="logo_sty"><p style="margin-top: 10px;">效果演示</p></div>
+		<ul class="header_sty_ul">
+			<li id="lifirst" class="header_sty_li"><a href="#">经济报道</a>
+				<span class="triangle"></span></li>
+			
+			<li id="lisecond" class="header_sty_li"><a href="#">娱乐新闻</a>
+				<span class="triangle"></span></li>
+			<li id="lithird" class="header_sty_li"><a href="#">实事新闻</a>
+				<span class="triangle"></span></li>
+			<li id="lifourd" class="header_sty_li"><a href="#">体育新闻</a>
+				<span class="triangle"></span></li>
+		</ul>
+	</div>
+	<div class="intrudoce">
+		<h1>样式说明</h1>
+		<section style="margin-top:20px;line-height:20px;">
+			此插件中包含了九个css样式分别为<span style="color:red;">(menu_content_hide,menu_content_show,list_ul,list_top,list_top_li,list_mune_a,list_top h2,list_mune_a:hover,menu_container:before)</span>;
+			其中的menu_content_hide，menu_content_show这两个样式负责菜单显示与隐藏转换间的动画变化，如下：
+			<div style="background:#e6eaed;margin-top:10px;">
+				<pre style="display:block;line-height:20px;" class="brush: css;">
+					.menu_content_hide
+					{
+						
+						width:230px;//菜单宽度
+						
+						border-radius: 3px;//圆角边框
+						position: absolute;//设置为绝对位置，其显示位置是通过js动态计算而得
+						
+						box-shadow: 0 2px 3px rgba(0,0,0,0.2);//菜单外阴影，颜色及位置大小
+						
+						transform-origin:20% 0;
+						-webkit-transform-origin:20% 0;
+						transform:scale(0);
+						-webkit-transform:scale(0);//已缩减形式隐藏
+						transition-property:all;
+						-webkit-transition-duration:0.5s;//这里可调节菜单转变所需的时间
+					transition-timing-function:cubic-bezier(0.34, 1.21, 0.4, 1);
+						border: 1px solid #e6eaed;
+						
+					}
+				</pre>
+				<pre style="display:block;line-height:20px;background:#e6eaed;margin-top:10px;" class="brush: css;">
+					.menu_content_show
+						{
+							z-index: 999;//覆盖的优先级,数字大的覆盖在上面
+							width:230px;
+							background: #fff;//背景颜色
+							border-radius: 3px;
+							position: absolute;
+							
+							box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+							
+							transform-origin:20% 0;//给transform渐变设定定位用的,第一个为X轴位置，第二个位Y轴位置
+							-webkit-transform-origin:20% 0;
+							transform:scale(1);
+							-webkit-transform:scale(1);已设定的大小显示
+							transition-property:all;
+							-webkit-transition-duration:0.5s;
+					transition-timing-function:cubic-bezier(0.34, 1.21, 0.4, 1);
+							border: 1px solid #e6eaed;
+							
+						}
+				</pre>
+
+			</div>
+			<div>
+				这两个样式大部分相同，主要不同在transform:scale(1)与transform:scale(0)这两个属性上，scale(0),表示为缩小为零已达到隐藏的目的。<br />
+				使用者可以根据自己的喜好或要求改变样式的transition-duration属性，使渐变时间变大或减少。<br/>
+			</div>
+			<pre style="display:block;line-height:20px;background:#e6eaed;margin-top:10px;" class="brush: css;">
+				
+				.list_ul
+					{
+						list-style: none;
+						display: inline-block;
+						border-bottom: 1px solid #e6eaed;
+					}
+					
+					.list_top
+					{
+						padding: 10px;
+						border-bottom: 1px solid #e6eaed;
+						float: left;
+					}
+					
+					.list_top_li
+					{
+						float: left;
+						color: #e6eaed;
+						width: 102px;
+						line-height: 24px;
+					}
+					
+					.list_mune_a{
+						
+						font-size: 14px;
+						color: #747f8c !important;
+					}
+					
+					.list_top h2
+					{
+						font-size: 11px;
+						margin-left: 8px;
+						margin-bottom: 5px;
+						text-transform: uppercase;//大小写显示
+						color: #747f8c;
+					}
+					
+					.list_mune_a:hover
+					{
+						color: #51aded !important;//颜色防止覆盖
+					}
+					
+					.menu_container:before
+					{
+					background: url(myhtml/triangle.png);//图片源
+					width: 20px;
+					height: 12px;
+					display: block;
+					content: "";//不现实内容
+					left: 38px;
+					bottom: 12px;//位置调整
+					position: relative;//显示位置
+				
+				}
+			</pre>
+			<p style="font-weight:border;margin-top:10px;">
+				以上是菜单中要用到的样式，使用者可以根据自己要求改变样式，但位置及显示或隐藏属性改变需谨慎。
+			</p>
+		</section>
+		<h1 style="margin-top:20px;">菜单js说明</h1>
+		<section style="margin-top:20px;line-height:20px;border:1px solide #e6eaed;">
+			
+			<p>使用本插件所需js代码较简单，只需要把适合的json数据传入，再指定所需绑定的元素即可，但注意本插件用的是id绑定，如下所示：</p>
+			<div style="background:#f7f7f9;margin-top:10px;">
+				<pre class="brush: javascript;">
+					$(document).ready(function()
+					{
+						$("#lifirst").menu({"root":
+									[
+										{"name1":"123","url":"www.baidu.com"},
+										{"name1":"国外公司","url":"www.baidu.com"},
+										{"name1":"国内资讯","url":"www.baidu.com"},
+										{"name1":"国外资讯","url":"www.baidu.com"},
+										{"name1":"CATEGORY","url":"www.baidu.com"},
+										{"name1":"-"},
+										{"name1":"123","url":"www.baidu.com"},
+										{"name1":"国外公司","url":"www.baidu.com"},
+										{"name1":"国内资讯","url":"www.baidu.com"},
+										{"name1":"国外资讯","url":"www.baidu.com"},
+										{"name1":"CATEGORY","url":"www.baidu.com"}
+									]
+								});
+						$("#lisecond").menu({"root":
+									[
+										{"name1":"123","url":"www.baidu.com"},
+										{"name1":"国外公司","url":"www.baidu.com"},
+										{"name1":"国内资讯","url":"www.baidu.com"},
+										{"name1":"国外资讯","url":"www.baidu.com"},
+										{"name1":"CATEGORY","url":"www.baidu.com"},
+										{"name1":"-"},
+										{"name1":"123","url":"www.baidu.com"},
+										{"name1":"国外公司","url":"www.baidu.com"},
+										{"name1":"国内资讯","url":"www.baidu.com"},
+										{"name1":"国外资讯","url":"www.baidu.com"},
+										{"name1":"CATEGORY","url":"www.baidu.com"},
+									]
+								});
+					})
+				</pre>
+			</div>
+			<strong style="margin-top:10px;display:block;">
+				$("")引号中的字符一定要是需绑定的标签的id值才能正确绑定,如(#lisecond)，menu中的值也需要是json格式的数据，注意在此json格式中有－减号表示分隔，会自动换行，
+				name1，url，root，这三个字符不改即使用，如需改这三个字符则需要在插件中进行相印的更改，具体地方在后面提及。
+				</strong>
+		</section>
+		<h1 style="margin-top:20px;">插件代码说明</h1>
+		<section style="margin-top:20px;line-height:20px;">
+			<pre class="brush: javascript;">
+				(function($)
+					{
+						$.fn.menu = function(data)
+						{
+						
+						numarguments.push(this.createrNode(this,data));
+						return this;
+			
+					}
+				})(jQuery);
+			</pre>
+				<strong style="margin-top:10px;display:block;font-size:14px;">
+					这个函数是用来接收输入数据用的，创建一个菜单，并且将数据传给处理数据的createrNode函数。
+					numarguments是一个全局数组，用来存储要绑定的元素。
+				</strong><br />
+			<pre class="brush: javascript;">
+				(function($){
+					$.fn.hideorshow = function(hide)
+					{
+						
+						if(!hide)
+						{
+								this.menu_elm.removeClass("menu_content_hide").addClass("menu_content_show");
+								this.menu_elm.css({"top":this.mar,"left":this.marleft});
+							} 
+							else
+							{
+								this.menu_elm.removeClass("menu_content_show").addClass("menu_content_hide");
+								this.menu_elm.css({"top":this.mar,"left":this.marleft});
+							}
+						return this;
+					}
+				})(jQuery);
+			</pre>
+				<strong style="margin-top:10px;display:block;font-size:14px;">
+					这个函数用来控制菜单隐藏或显示的，传入一个数据，如果是true则显示，为false则显示。
+					在createrNode函数中会调用到。
+				</strong>
+				<pre class="brush: javascript;">
+(function($)
+	{
+		$.fn.createrNode = function(node,data)
+			{
+				var menu_elm;//用来标定菜单整体框架div
+				this.uni=node;
+				var position=node.offset();//获取绑定元素的偏移
+			var mar=position.top+node.height()+20;//这里用来设定菜单顶点的位置使用者可以自行更改最后的那个数值，以调节到需要的位置
+				var marleft=position.left;//绑定元素的左偏移
+				this.mar = mar;
+				this.marleft = marleft;
+				var me = this;//指向自己，就是绑定的元素
+				var numul = 0;//指示哪一个ul下添加内容
+				var toggle_menu = function(event)//不同绑定元素间的菜单显示
+					{
+								
+						for(var i = 0 ; i < numarguments.length;i++)
+							{
+								if(numarguments[i]!= me)
+								{
+										
+									numarguments[i].hideorshow(true);
+								}
+							}
+						me.hideorshow(menu_elm.hasClass("menu_content_show"));
+						event.stopPropagation();
+					}
+						//点击页面其他地方隐藏菜单
+				var otherhtmlhide = function(event)
+					{
+						for(var i = 0;i < numarguments.length;i++)
+							{
+								if(numarguments[i].uni.attr("id") != event.target.getAttribute("id"))
+								{
+									for(var i = 0 ; i < numarguments.length;i++)
+										{
+										
+											numarguments[i].hideorshow(true);
+										}
+								}
+							}
+					}
+				this.menu_elm = menu_elm = $("<div></div>").addClass("menu_content_hide").addClass("menu_container");
+				menu_elm.css({"top":mar,"left":marleft});
+				node.after(menu_elm);
+				node.on("click", toggle_menu);
+				$(window).on("click",otherhtmlhide);	
+				var section=$("<section></section>").addClass("list_top").attr("id","list_top_1");
+				var ur_1=$("<ul></ul>").addClass("list_ul");	
+				menu_elm.append(section);
+				//get the data from argument
+				var getData = function(node)//取出传入的数据
+					{
+						var datalength = node.root.length;//取得数据长度
+						var object = eval(node);//转换成json对象
+						var hh2 = $("<h2></h2>").text(object.root[datalength-1].name1);
+						section.prepend(hh2);
+						if(datalength != 0)
+							{
+								section.append($("<ul></ul>").addClass("list_ul"));	
+								for(var i = 0; i< datalength; i++)<br />
+									{
+										var list1 = $("<li></li>").addClass("list_top_li");
+										if(object.root[i].name1 == "-")
+											{
+												var a1 = $("<a></a>").addClass("list_mune_a").css("width","0").text("");
+												section.append($("<ul></ul>").addClass("list_ul"));//若是数据出现－号时，不输入，且换行
+												numul +=1;//转入下一个列表
+											
+											}
+										else//不为空，则将数据输入列表
+										{
+
+											var a1 = $("<a></a>").addClass("list_mune_a").attr("href","http://"+object.root[i].url).text(object.root[i].name1);
+										}
+											
+											section.find("ul").eq(numul).append(list1);
+											list1.append(a1);
+									}
+									
+								}
+							}
+							
+							section.append(ur_1);
+							if (menu_elm.text() == "")//若是表单数据为空，则取数据，否则消除数据
+							{
+								getData(data);
+							} else 
+							{
+								menu_elm.empty();
+							}
+							return this;
+						};
+					})(jQuery);
+			</pre>
+		</section>
+		<strong style="margin-top:10px;display:block;font-size:14px;">这个函数，为插件的主函数，其作用是取数据，创建表单的标签，并显示数据，添加样式，可根据需要稍加改动。</strong><br /><br />
+	</div>
+</body>
